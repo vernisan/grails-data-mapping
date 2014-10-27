@@ -96,9 +96,17 @@ subprojects {
 /*        apply from: "file:${rootDir}/clover.gradle"*/
 
         install.doLast {
-            def gradleArtifactCache = new File(gradle.gradleUserHomeDir, "cache")
-            configurations.archives.artifacts.findAll { it.type == "jar" && !it.classifier }.each { artifact ->
 
+	    println "Instalando o plugin"
+
+            def gradleArtifactCache = new File(gradle.gradleUserHomeDir, "cache")
+
+	    configurations.archives.artifacts.each{
+		println "${it} ${it.type} ${it.classifier}"
+		println "${gradleArtifactCache}/${project.group}/${project.name}/jars/${project.name}-${version}.jar"
+	    }
+
+            configurations.archives.artifacts.findAll { it.type == "jar" && !it.classifier }.each { artifact ->
                 // Gradle's cache layout is internal and may change in future versions, this is written for gradle 1.0-milestone-3
                 def artifactInCache = file("${gradleArtifactCache}/${project.group}/${project.name}/jars/${project.name}-${version}.jar")
                 if (artifactInCache.parentFile.mkdirs()) {

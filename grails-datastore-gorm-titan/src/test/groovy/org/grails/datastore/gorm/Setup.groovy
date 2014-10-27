@@ -6,13 +6,13 @@ import org.apache.tomcat.jdbc.pool.DataSource
 import org.apache.tomcat.jdbc.pool.PoolProperties
 import org.grails.datastore.gorm.events.AutoTimestampEventListener
 import org.grails.datastore.gorm.events.DomainEventListener
-import org.grails.datastore.gorm.neo4j.DumpGraphOnSessionFlushListener
-import org.grails.datastore.gorm.neo4j.HashcodeEqualsAwareProxyFactory
-import org.grails.datastore.gorm.neo4j.Neo4jDatastore
-import org.grails.datastore.gorm.neo4j.Neo4jGormEnhancer
-import org.grails.datastore.gorm.neo4j.Neo4jMappingContext
-import org.grails.datastore.gorm.neo4j.TestServer
-import org.grails.datastore.gorm.neo4j.engine.JdbcCypherEngine
+import org.grails.datastore.gorm.titan.DumpGraphOnSessionFlushListener
+import org.grails.datastore.gorm.titan.HashcodeEqualsAwareProxyFactory
+import org.grails.datastore.gorm.titan.TitanDatastore
+import org.grails.datastore.gorm.titan.TitanGormEnhancer
+import org.grails.datastore.gorm.titan.TitanMappingContext
+import org.grails.datastore.gorm.titan.TestServer
+import org.grails.datastore.gorm.titan.engine.JdbcCypherEngine
 import org.grails.datastore.mapping.core.Session
 import org.grails.datastore.mapping.model.MappingContext
 import org.grails.datastore.mapping.model.PersistentEntity
@@ -37,7 +37,7 @@ class Setup {
 
     protected static final Logger log = LoggerFactory.getLogger(getClass())
 
-    static Neo4jDatastore datastore
+    static TitanDatastore datastore
     static GraphDatabaseService graphDb
     static DataSource dataSource
     static WebServer webServer

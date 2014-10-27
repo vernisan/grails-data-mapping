@@ -1,6 +1,6 @@
 package grails.gorm.tests
 
-import org.grails.datastore.gorm.neo4j.Neo4jGormEnhancer
+import org.grails.datastore.gorm.titan.TitanGormEnhancer
 import org.neo4j.helpers.collection.IteratorUtil
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

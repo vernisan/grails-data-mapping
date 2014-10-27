@@ -1,6 +1,6 @@
 package grails.gorm.tests
 
-import org.grails.datastore.gorm.neo4j.RelationshipUtils
+import org.grails.datastore.gorm.titan.RelationshipUtils
 
 /**
  * Created by stefan on 14.04.14.

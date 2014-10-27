@@ -1,7 +1,7 @@
 package grails.gorm.tests
 
-import org.grails.datastore.gorm.neo4j.IdGenerator
-import org.grails.datastore.gorm.neo4j.SnowflakeIdGenerator
+import org.grails.datastore.gorm.titan.IdGenerator
+import org.grails.datastore.gorm.titan.SnowflakeIdGenerator
 import spock.lang.Specification
 
 /**
