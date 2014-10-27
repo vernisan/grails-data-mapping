@@ -42,6 +42,7 @@ include ("grails-datastore-core",
         'grails-datastore-gorm-cassandra',
         'grails-datastore-gorm-jpa',
         'grails-datastore-gorm-neo4j',
+	'grails-datastore-gorm-titan',
         'grails-datastore-gorm-redis',
         'grails-datastore-gorm-rest-client',
         
